@@ -1,6 +1,12 @@
+import logging
 from datetime import datetime
 from random import randint
 from uuid import uuid4
+
+# It is not recommended to enable DEBUG logs in production,
+# this is just to show an example of a recommendation
+# by Amazon CodeGuru Profiler.
+logging.getLogger('botocore').setLevel(logging.DEBUG)
 
 
 def lambda_handler(event, context):
